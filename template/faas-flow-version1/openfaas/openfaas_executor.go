@@ -190,7 +190,7 @@ func (of *OpenFaasExecutor) GetDataStore() (sdk.DataStore, error) {
 func (of *OpenFaasExecutor) Init(request *runtime.Request) error {
 	of.gateway = config.GatewayURL()
 	//of.flowName = request.FlowName
-	of.flowName = "version1"
+	of.flowName = "version1b"
 	of.asyncURL = buildURL("http://"+of.gateway, "async-function", of.flowName)
 
 	callbackURL := request.GetHeader("X-Faas-Flow-Callback-Url")

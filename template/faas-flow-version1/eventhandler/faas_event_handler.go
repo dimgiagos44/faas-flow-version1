@@ -15,7 +15,7 @@ type FaasEventHandler struct {
 
 func (eh *FaasEventHandler) Configure(flowName string, requestID string) {
 	//eh.flowName = flowName
-	eh.flowName = "version1"
+	eh.flowName = "version1b"
 }
 
 func (eh *FaasEventHandler) Init() error {
