@@ -19,6 +19,8 @@ RUN go mod download
 
 RUN go mod download github.com/faasflow/faas-flow-redis-statestore
 
+Run go mod tidy
+
 COPY . .
 
 # Run a gofmt and exclude all vendored code.
