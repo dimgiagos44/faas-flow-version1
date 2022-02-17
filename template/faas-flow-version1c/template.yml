@@ -1,4 +1,4 @@
-language: faas-flow-version1
+language: faas-flow-version1c
 fprocess: ./handler
 welcome_message: |
   You have created a FaasFlow function.
