@@ -17,9 +17,6 @@ COPY ./go.mod ./go.sum ./
 
 RUN go mod download
 
-RUN go mod download github.com/faasflow/faas-flow-redis-statestore
-
-RUN go mod tidy
 
 COPY ./go.mod ./go.sum ./
 
