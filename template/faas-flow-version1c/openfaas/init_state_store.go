@@ -7,13 +7,11 @@ import (
 	"handler/function"
 
 	consulStateStore "github.com/faasflow/faas-flow-consul-statestore"
-	redisStateStore "github.com/faasflow/faas-flow-redis-statestore"
 	"github.com/faasflow/sdk"
 )
 
 func initStateStore() (stateStore sdk.StateStore, err error) {
-	//stateStore, err = function.OverrideStateStore()
-	stateStore, err = redisStateStore.GetRedisStateStore(os.Getenv("redis_url"), os.Getenv("redis_master"))
+	stateStore, err = function.OverrideStateStore()
 	if err != nil {
 		return nil, err
 	}
